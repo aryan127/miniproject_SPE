@@ -1,0 +1,16 @@
+---
+- name: Deploy Docker image
+  hosts: all
+  become: true
+  tasks:
+    - name: Pull Docker image
+      docker_image:
+        name: "{{ docker_image }}"
+        source: pull
+
+    - name: Start Docker container
+      docker_container:
+        name: "{{ docker_container_name }}"
+        image: "{{ docker_image }}"
+        state: started
+        
