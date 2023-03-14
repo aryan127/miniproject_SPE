@@ -16,3 +16,5 @@
         name: "{{ docker_container_name }}"
         image: "{{ docker_image }}"
         state: started
+        tty: yes
+        interactive: yes
