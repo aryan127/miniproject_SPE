@@ -2,6 +2,9 @@
 - name: Deploy Docker image
   hosts: all
   become: true
+  vars:
+    docker_image: "aryan1207/miniproject_aryan"
+    docker_container_name: "spe_mini_project_container"
   tasks:
     - name: Pull Docker image
       docker_image:
