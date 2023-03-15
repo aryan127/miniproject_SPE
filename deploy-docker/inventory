@@ -1,2 +1,2 @@
-[ubuntu18]
-127.0.0.1 ansible_user=aryan ansible_password=aryan
+[localhost]
+aryan ansible_connection=local
