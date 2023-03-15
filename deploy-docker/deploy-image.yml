@@ -1,6 +1,6 @@
 ---
 - name: Deploy Docker image
-  hosts: local
+  hosts: localhost
   vars:
     docker_image: "docker.io/aryan1207/miniproject_aryan"
     docker_container_name: "spe_mini_project_container"
