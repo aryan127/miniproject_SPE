@@ -1,8 +1,19 @@
 ---
-- name: Pull docker image of Calculator
-  hosts: all
+- name: Deploy Docker container
+  hosts: 172.17.0.1 
+  become: true
+
   tasks:
-    - name: Pull image
+    - name: Pull Docker image
       docker_image:
         name: aryan1207/miniproject_aryan
-        source: pull
+        pull: yes
+
+    - name: Start Docker container
+      docker_container:
+        name: miniproject
+        image: aryan1207/miniproject_aryan
+        state: started
+        ports:
+          - "80:80"
+        restart_policy: always
