@@ -9,7 +9,7 @@
         state: started
         
     - name: pull docker image
-      shell: docker pull shahharsh8/speminiproject
+      shell: docker pull docker.io/aryan1207/miniproject_aryan
       
     - name: running container
-      shell: docker run -it -d shahharsh8/speminiproject
+      shell: docker run -it -d aryan1207/miniproject_aryan
