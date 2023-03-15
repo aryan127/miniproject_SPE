@@ -1,2 +1,2 @@
 [ubuntu18]
-172.16.141.185 ansible_user=aryan
+172.16.141.185 ansible_user=aryan ansible_password=aryan
