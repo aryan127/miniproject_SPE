@@ -1,2 +1,2 @@
-[my-aws-instances]
-3.231.168.72 ansible_ssh_private_key_file=/home/aryan/Downloads/miniKey.pem ansible_user=ubuntu
+[ubuntu18]
+172.17.0.1 ansible_user=aryan
