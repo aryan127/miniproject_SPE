@@ -1,6 +1,6 @@
 ---
 - name: Deploy Docker container
-  hosts: 172.17.0.1 
+  hosts: 172.16.141.185 
   become: true
 
   tasks:
