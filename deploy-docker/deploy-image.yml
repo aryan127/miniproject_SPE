@@ -1,19 +1,20 @@
 ---
-- name: Deploy Docker container
-  hosts: 172.16.141.185 
+- name: Deploy Docker image
+  hosts: all
   become: true
-
+  vars:
+    docker_image: "docker.io/aryan1207/miniproject_aryan"
+    docker_container_name: "spe_mini_project_container"
   tasks:
     - name: Pull Docker image
       docker_image:
-        name: aryan1207/miniproject_aryan
-        pull: yes
+        name: "{{ docker_image }}"
+        source: pull
 
     - name: Start Docker container
       docker_container:
-        name: miniproject
-        image: aryan1207/miniproject_aryan
+        name: "{{ docker_container_name }}"
+        image: "{{ docker_image }}"
         state: started
-        ports:
-          - "80:80"
-        restart_policy: always
+        tty: yes
+        interactive: yes
