@@ -1,2 +1,3 @@
 # miniproject_SPE
-calculator  SPE
+Calculator  SPE
+ 
